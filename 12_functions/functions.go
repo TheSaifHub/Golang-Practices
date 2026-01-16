@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"net/http"
-)
+import "fmt"
 
 // // function practice on numbers
 // func add(a int, b int) int {
@@ -70,14 +67,27 @@ import (
 // }
 
 // This is the real world example of anonymous function usage.
+// func main() {
+
+// 	// Route: /hello
+// 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+// 		fmt.Fprintln(w, "Hello from anonymous function")
+// 	})
+
+// 	// Starts server on port 8080
+// 	fmt.Println("Server started at http://localhost:8080")
+// 	http.ListenAndServe(":8080", nil)
+// }
+
+func processIt() func(a int) int {
+	return func(a int) int {
+		return 4
+	}
+}
+
 func main() {
 
-	// Route: /hello
-	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Hello from anonymous function")
-	})
-
-	// Starts server on port 8080
-	fmt.Println("Server started at http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	fn := processIt()
+	fn(5)
+	// fmt.Println(fn)
 }
