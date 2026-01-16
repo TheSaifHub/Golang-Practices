@@ -23,12 +23,12 @@ func main() {
 	// 	fmt.Println(i,"=", v)
 	// }
 
-	// for string
+	// // for string
 	str := "Saif"
 
 	for i, v := range str {
-		fmt.Println(i, v)
+		fmt.Println(i, string(v))
 	}
-
+	
 
 }
