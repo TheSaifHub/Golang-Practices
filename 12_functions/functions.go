@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // // function practice on numbers
 // func add(a int, b int) int {
 // 	return a + b
@@ -89,5 +87,4 @@ func main() {
 
 	fn := processIt()
 	fn(5)
-	fmt.Println(fn)
 }
