@@ -89,5 +89,5 @@ func main() {
 
 	fn := processIt()
 	fn(5)
-	// fmt.Println(fn)
+	fmt.Println(fn)
 }
